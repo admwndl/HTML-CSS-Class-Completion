@@ -181,7 +181,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
     });
 
     // HTML based extensions
-    ["html", "django-html", "razor", "php", "blade", "vue", "twig", "markdown", "erb", "handlebars", "ejs"].forEach((extension) => {
+    ["html", "django-html", "razor", "php", "blade", "vue", "twig", "markdown", "erb", "handlebars", "ejs", "mako"].forEach((extension) => {
         context.subscriptions.push(provideCompletionItemsGenerator(extension, /class=["|']([\w- ]*$)/));
     });
 
